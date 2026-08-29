@@ -1,7 +1,8 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { NavigationProvider } from "@/components/layout/NavigationContext";
-import Sidebar from "@/components/layout/Sidebar";
+import { NavigationProvider } from "@/components/navigation/NavigationContext";
+import Navbar from "@/components/navigation/Navbar";
+import Sidebar from "@/components/navigation/Sidebar";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
       <body>
         <NavigationProvider>
           <Sidebar />
+          <Navbar />
           {children}
         </NavigationProvider>
       </body>

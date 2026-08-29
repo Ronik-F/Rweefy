@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { navigation } from "@/lib/navigation";
 import { useNavigation } from "./NavigationContext";
@@ -62,17 +62,6 @@ export default function Sidebar() {
   const pathname = usePathname();
   const [expanded, setExpanded] = useState({});
 
-  // Auto-expand parent of active route
-  useEffect(() => {
-    const next = {};
-    navigation.forEach((item) => {
-      if (item.children?.some((c) => pathname.startsWith(c.href))) {
-        next[item.label] = true;
-      }
-    });
-    setExpanded((prev) => ({ ...prev, ...next }));
-  }, [pathname]);
-
   const toggleExpand = (label) => {
     setExpanded((prev) => ({ ...prev, [label]: !prev[label] }));
   };
@@ -81,7 +70,6 @@ export default function Sidebar() {
     if (href === "/") return pathname === "/";
     return pathname === href || pathname.startsWith(href + "/");
   };
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -151,6 +139,7 @@ export default function Sidebar() {
                       index={index}
                       isActive={isActive}
                       expanded={expanded}
+                      pathname={pathname}
                       toggleExpand={toggleExpand}
                       onNavigate={close}
                     />
@@ -191,11 +180,14 @@ function NavItem({
   index,
   isActive,
   expanded,
+  pathname,
   toggleExpand,
   onNavigate,
 }) {
   const hasChildren = item.children && item.children.length > 0;
-  const isOpen = expanded[item.label];
+  const isOpen =
+    expanded[item.label] ??
+    item.children?.some((child) => pathname.startsWith(child.href));
   const active = isActive(item.href);
 
   return (

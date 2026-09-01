@@ -11,13 +11,13 @@ export default function Hero() {
       {/* Background Portrait */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero.png"
+          src="/heroimage/RonikF.png"
           alt="Ronik Koirala"
           fill
           priority
           quality={95}
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-[70%_center] md:object-[60%_center] lg:object-center"
         />
       </div>
 

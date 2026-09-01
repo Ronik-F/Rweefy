@@ -45,7 +45,7 @@ export default function Logo() {
                 className="absolute inset-0"
               >
                 <Image
-                  src="/logo/rk-logo.jpg"
+                  src="/logo/roniklogo.jpg"
                   alt="Ronik Koirala Logo"
                   fill
                   sizes="64px"

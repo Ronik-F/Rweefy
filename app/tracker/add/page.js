@@ -1,10 +1,10 @@
-import { redirect } from "next/navigation";
+import TrackerEntryPage from "@/components/tracker/TrackerEntryPage";
 
 export const metadata = {
-  title: "Add Entry — Tracker",
-  description: "Add a personal activity entry to the tracker.",
+  title: "Admin Log Console — Tracker",
+  description: "Log quantified focus, sleep, vitality, and habit metrics with instant persistence.",
 };
 
 export default function AddTrackerPage() {
-  redirect("/tracker/fitness");
+  return <TrackerEntryPage category="deep-work" />;
 }

@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ronik Koirala — Portfolio & Telemetry Engine
 
-## Getting Started
+> *"i don't like unnecessary complexity — in design, or in life."*
 
-First, run the development server:
+A minimal, high-performance personal portfolio and quantified-self telemetry platform. Built to feel less like a static resume and more like a fast, living digital workspace.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚡ What is this?
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This is my personal space on the web. It combines two core ideas:
+1. **An editorial portfolio** — Showcasing selected software engineering projects, experiments, and technical philosophy with zero clutter and kinetic typography.
+2. **A personal telemetry dashboard (`/tracker`)** — A real-time quantified-self tracker monitoring deep work focus sessions, circadian rhythm, habit compounding, and daily vitality using custom SVG visualizations.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Key Features
 
-To learn more about Next.js, take a look at the following resources:
+- **Editorial & Monochromatic Aesthetic:** Dark `#0a0a0a` palette, crisp General Sans typography, and JetBrains Mono for metrics and technical logs.
+- **Fluid 60fps Micro-Interactions:** Smooth page transitions, word-by-word kinetic text reveals, and gesture-friendly drawer navigation driven by Framer Motion.
+- **Quantified-Self Telemetry:**
+  - **Heatmaps & Progress Rings:** Activity density grid and circular SVG completion trackers.
+  - **Trend Charts:** Real-time SVG charts for cognitive focus and productivity spikes.
+  - **Admin Entry Console:** In-browser dashboard to log daily habits, sleep, workouts, and journal entries with instant client persistence.
+- **Bento Philosophy & About Dossier:** Interactive timeline, tech stack breakdown, and live "Now" status (reading, building, listening).
+- **Curated Work Gallery:** Filterable case studies with metrics, architectural challenges, and live demos.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Built With
 
-## Deploy on Vercel
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router, React Server Components)
+- **Library:** [React 19](https://react.dev/) + React Compiler
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Typography:** General Sans + JetBrains Mono
+- **Icons:** [Lucide React](https://lucide.dev/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Getting Started
+
+### Prerequisites
+Make sure you have Node.js 18+ installed.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/RonikF/Rweefy.git
+   cd Rweefy
